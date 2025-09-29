@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TaskPad</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="left">
+                <h1>C:\Program Files (x86)\TaskPad\TaskPad.exe</h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><p class="btns1">-</p></li>
+                    <li><p class="btns1">□</p></li>
+                    <li id="close"><p>x</p></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="maincard">
+                <center><h2>TaskPad</h2></center>
+                <br><hr><br>
+                <form novalidate>
+                    <label><b>Título</b></label>
+                    <input id="tasktitle" type="text" placeholder="Digite aqui..." required>
+                    <button type="submit" id="confirm" onclick="addTask()">Adicionar</button>
+                    <br><br>
+                </form>
+            </div>
+            <!--
+            <div id="done">
+                <h3>Tarefas concluídas</h3>
+                <div class="taskdone">
+                    <h4>`+title+`</h4>
+                </div>
+            </div>-->
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 100px;
+    background: linear-gradient(lightblue, rgb(19, 19, 255));
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(rgb(60, 60, 255), blue, rgb(46, 46, 255));
+    border: 1px solid rgba(0, 0, 228, 0.555);
+    box-shadow: 5px 5px 15px -9px #000000;
+}
+
+.left h1 {
+    font-size: 15px;
+    margin: 10px;
+    color: white;
+}
+
+.right ul {
+    list-style: none;
+    cursor: default;
+    color: white;
+    user-select: none;
+}
+.right li {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 2px;
+}
+.right li:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.397), rgba(170, 170, 170, 0.479));
+    color: black;
+    cursor: pointer;
+}
+.right #close:hover {
+    background: linear-gradient(rgba(255, 79, 79, 0.747), rgba(189, 0, 0, 0.89));
+    color: black;
+    cursor: pointer;
+}
+
+.maincard {
+    background-color: rgb(156, 156, 156);
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px -9px #000000;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+label, #confirm {
+    margin: 10px;
+}
+
+.maincard h2 {
+    color: blue;
+}
+
+#tasktitle {
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#confirm {
+    border: none;
+    font-size: 15px;
+    background: linear-gradient(white, rgba(173, 216, 230, 0.61));
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, 0.603);
+}
+#confirm:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#items {
+    border-radius: 3px;
+    background-color: rgb(156, 156, 156);
+    padding: 15px;
+    box-shadow: 5px 5px 15px -9px #000000;
+}
+
+#items h3 {
+    color: white;
+    margin: 5px;
+}
+
+.itemcard {
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 15px -9px #000000;
+}
+
+.check {
+    border: none;
+    font-size: 12px;
+    background: linear-gradient(rgba(128, 255, 111, 0.274), rgba(6, 167, 0, 0.685));
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, 0.603);
+}
+.check:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+.remove {
+    border: none;
+    font-size: 12px;
+    background: linear-gradient(rgba(255, 111, 111, 0.274), rgba(167, 0, 0, 0.685));
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, 0.603);
+}
+.remove:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+#done {
+    background-color: rgb(156, 156, 156);
+    padding: 25px;
+    color: white;
+}
+
+#done h4 {
+    color: green;
+    padding: 5px;
+    background-color: white;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 3px;
+}
