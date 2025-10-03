@@ -46,7 +46,7 @@ function addTask() {
             <h4 id="${titleTask}">${title}</h4>
             <br>
             <button type="button" class="check" id="${idCheck}" onclick="taskDone('${titleTask}', '${idTask}')">Feito</button>
-            <button type="button" class="remove" id="${idRemove}" onclick="removeItem('${idTask}')">Remover</button>
+            <button type="button" class="remove" id="${idRemove}" onclick="removeItem('${idTask}', 'false')">Remover</button>
         </div>
     `;
 
@@ -58,16 +58,22 @@ function addTask() {
     document.getElementById("tasktitle").value = "";
 }
 
-function removeItem(taskId) {
+function removeItem(taskId, check) {
     const taskDiv = document.getElementById(taskId);
 
     if(taskDiv) {
         taskDiv.remove();
     }
-
-    taskCounter--;
     
+    taskCounter--;
     espacoVazio();
+
+    let divItems = document.getElementById("items");
+
+    if(divItems && taskCounter==0) {
+        divItems.remove();
+    }
+
 }
 
 function espacoFeito() {
@@ -91,12 +97,19 @@ function taskDone(titleTask, taskId) {
     const h4Task = document.getElementById(titleTask);
 
     if (h4Task) {
-        const h4Clone = h4Task.cloneNode(true);
-        divFeito.appendChild(h4Clone);
+        const newH4 = document.createElement("h4");
+
+        const del = document.createElement("del");
+        del.textContent = h4Task.textContent;
+
+        newH4.appendChild(del);
+
+        divFeito.appendChild(newH4);
     }
     
-    removeItem(taskId);
+    removeItem(taskId, true);
 }
+
 
 
 function espacoVazio() {
